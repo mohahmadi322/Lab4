@@ -6,10 +6,12 @@ public class ResidentialSIte extends Site{
 
 
     double getBaseAmount(){
-        return _units;
+        double base = _units * _rate * 0.5;
+        return base;
     }
 
-    double getTaxAmount(){
-        return _rate;
+    double getTaxAmount(double base){
+        double tax = base * Site.TAX_RATE * 0.2;
+        return tax;
     }
 }

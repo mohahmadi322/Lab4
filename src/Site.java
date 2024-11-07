@@ -10,10 +10,17 @@ public class Site {
 
 
     double getBillableAmount(){
-        double base = _units * _rate * 0.5;
-        double tax = base * Site.TAX_RATE * 0.2;
-        return base + tax;
+        return getBaseAmount() + getTaxAmount(getBaseAmount());
 
+    }
+    double getBaseAmount(){
+        double base = _units * _rate;
+        return base;
+    }
+
+    double getTaxAmount(double base){
+        double tax = base * Site.TAX_RATE;
+        return tax;
     }
 
 }
