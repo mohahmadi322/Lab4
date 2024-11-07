@@ -15,4 +15,5 @@ public class Site {
         return base + tax;
 
     }
+
 }

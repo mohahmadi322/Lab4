@@ -5,4 +5,11 @@ public class ResidentialSIte extends Site{
     }
 
 
+    double getBaseAmount(){
+        return _units;
+    }
+
+    double getTaxAmount(){
+        return _rate;
+    }
 }
