@@ -1,7 +1,11 @@
-public class Site {
+public abstract class Site {
     public static final double TAX_RATE = 0.13;
     protected double _units;
     protected double _rate;
+
+    public abstract double getBaseAmount();
+
+    public abstract double getTaxAmount(double base);
 
     public Site(double _units, double _rate) {
         this._units = _units;
@@ -13,14 +17,6 @@ public class Site {
         return getBaseAmount() + getTaxAmount(getBaseAmount());
 
     }
-    double getBaseAmount(){
-        double base = _units * _rate;
-        return base;
-    }
 
-    double getTaxAmount(double base){
-        double tax = base * Site.TAX_RATE;
-        return tax;
-    }
 
 }
