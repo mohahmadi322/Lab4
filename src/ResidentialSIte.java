@@ -1,20 +1,8 @@
 public class ResidentialSIte extends Site{
 
-        private double _units;
-        private double _rate;
-
-        public ResidentialSIte(double _units, double _rate) {
-            this._units = _units;
-            this._rate = _rate;
-        }
-
-
-        double getBillableAmount(){
-            double base = _units * _rate * 0.5;
-            double tax = base * Site.TAX_RATE * 0.2;
-            return base + tax;
-
-        }
+    public ResidentialSIte(double _units, double _rate) {
+        super(_units, _rate);
+    }
 
 
 }
